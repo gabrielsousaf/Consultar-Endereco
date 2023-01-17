@@ -1,0 +1,14 @@
+body{
+    background-color: #DEDEDE;
+}
+
+img{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@media (max-width:1200px){
+    section{
+        display: block;
+    }
+}
