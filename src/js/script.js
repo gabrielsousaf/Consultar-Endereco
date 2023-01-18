@@ -1,27 +1,42 @@
-const INPUT_CEP = document.getElementById('cep')
-const INPUT_LOGRADOURO = document.getElementById('logradouro')
-const INPUT_NUMERO = document.getElementById('numero')
-const INPUT_BAIRRO = document.getElementById('bairro')
-const INPUT_CIDADE = document.getElementById('cidade')
-const INPUT_UF = document.getElementById('uf')
-const BUTTON = document.getElementById('button')
+const inputCEP = document.getElementById('cep');
+const inputLogradouro = document.getElementById('logradouro');
+const inputNumero = document.getElementById('numero');
+const inputBairro = document.getElementById('bairro');
+const inputCidade = document.getElementById('cidade');
+const inputUF = document.getElementById('uf');
+const btn = document.getElementById('button');
+
 
 const buscaEnderecoPorCep = () => {
-    let cep = INPUT_CEP.value
-    if (cep.length !== 8) {
+    let cep =inputCEP.value;
+    
+    if (!/^\d{8}$/.test(cep)) {
+        alert('CEP inválido');
         return;
     }
+    
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Error ao buscar endereço');
+            }  
+            return res.json();  
+        })
         .then(json => {
-            INPUT_LOGRADOURO.value = json.logradouro;
-            INPUT_BAIRRO.value = json.bairro;
-            INPUT_CIDADE.value = json.localidade;
-            INPUT_UF.value = json.uf;
+            inputLogradouro.value = json.logradouro;
+            inputBairro.value = json.bairro;
+            inputCidade.value = json.localidade;
+            inputUF.value = json.uf;
 
-            INPUT_NUMERO.focus();
-        });
+            inputNumero.focus();
+
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Erro ao buscar o endereço, por favor tente novamente mais tarde');
+        });  
 }
 
-INPUT_CEP.addEventListener('blur', buscaEnderecoPorCep);
+
+inputCEP.addEventListener('blur', buscaEnderecoPorCep);
