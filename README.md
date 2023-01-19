@@ -25,4 +25,4 @@
 ## ✨ Consultar Endereço.
 > Projeto feito em Javascript
 
-https://gabrielsousaf.github.io/Tic-Tac-Toe/
+https://gabrielsousaf.github.io/Consultar-Endereco/
