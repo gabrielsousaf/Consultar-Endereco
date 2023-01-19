@@ -5,14 +5,14 @@
 
   
   # 📱 Consultar Endereço.
-> Esse repositório tem como objetivo principal de apresentar meus estudos e aplicar em projetos pessoais.
+> Esse repositório tem como objetivo principal apresentar meus estudos e aplicar em projetos pessoais. Este projeto é um buscador de endereço, onde o usuário insere o CEP e os dados de endereço são preenchidos automaticamente.
 
 
 ## ⚙ Descrição do projeto.
-> * Dois inputs para colocar os nomes dos jogadores, e caso os jogadores não coloquem os nomes, na notificação de quem ganhou o jogo informa qual o símbolo vencedor.<br>
-> * Contagem de vitorias dos jogadores.<br>
-> * Botão para resetar a pontuação e começar um novo jogo. <br> 
-> * Mensagem para quando o jogo terminar.<br>
+> * Um input para inserir o CEP<br>
+> * Campos para preenchimento automático do endereço (logradouro, bairro, cidade, UF)<br>
+> * Feedback para o usuário enquanto a busca está sendo realizada. <br> 
+> * Tratamento de erros e validação do CEP.<br>
 > * Responsividade mobile.
 
 
@@ -22,7 +22,7 @@
 [![CSS](https://img.shields.io/badge/css%20-%23323330.svg?&style=for-the-badge&logo=css&logoColor=black&color=2E64FE)](#)
 [![JAVASCRIPT](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=css&logoColor=black&color=FFFF00)](#)
 
-## ✨ Formulario de Validação.
-> Jogo da velha feito em Javascript.
+## ✨ Consultar Endereço.
+> Projeto feito em Javascript
 
 https://gabrielsousaf.github.io/Tic-Tac-Toe/
